@@ -88,6 +88,48 @@ app.controller('HomeController', ['$scope', function($scope) {
       likes:	812,
       dislikes:	101,
       posterindex: 0
+	},
+    {
+      title:	'Troy',
+      iscore:	7.2,
+      rating:	'R',
+      runtime:	163,
+      released:	new Date('2004', '04', '14'),
+      country:	'USA',
+			posters:	['img/troy1.jpg','img/troy2.jpg'],
+      imdb:		'http://www.imdb.com/title/tt0332452',
+      website:	'https://www.facebook.com/Troy.Film',
+      likes:	485,
+      dislikes:	21,
+      posterindex: 0
+	},
+    {
+      title:	'300',
+      iscore:	7.7,
+      rating:	'R',
+      runtime:	117,
+      released:	new Date('2007', '02', '09'),
+      country:	'USA',
+      posters:	['img/300_1.jpg','img/300_2.jpg','img/300_3.jpg','img/300_4.jpg'],
+      imdb:		'http://www.imdb.com/title/tt0416449',
+      website:	'https://www.facebook.com/300Movie',
+      likes:	900,
+      dislikes:	52,
+      posterindex: 0
+	},
+    {
+      title:	'Avengers: Age of Ultron',
+      iscore:	7.5,
+      rating:	'PG-13',
+      runtime:	141,
+      released:	new Date('2015', '04', '01'),
+      country:	'USA',
+      posters:	['img/ultron1.jpg','img/ultron2.jpg','img/ultron3.jpg','img/ultron4.jpg','img/ultron5.jpg','img/ultron6.jpg'],
+      imdb:		'http://www.imdb.com/title/tt2395427',
+      website:	'https://www.facebook.com/avengers',
+      likes:	750,
+      dislikes:	500,
+      posterindex: 0
 	}
 
 
@@ -119,8 +161,8 @@ app.controller('HomeController', ['$scope', function($scope) {
 			$scope.movies[index].posterindex=0;
 		}
 	};
-	$scope.timeText = function($minutes){
-
+	$scope.timeText = function(minutes){
+		return Math.floor(minutes/60)+"h "+minutes%60+"m";
 	};
 
 
